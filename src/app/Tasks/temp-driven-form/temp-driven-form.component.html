@@ -1,0 +1,30 @@
+<h1>Angular Template Driven form</h1>
+<div class="col-sm-6">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="mb-3">
+          <label class="form-label">User Name</label>
+          <input required #uname="ngModel" type="text" class="form-control" name="name" ngModel>
+        <span *ngIf="uname.invalid && uname.touched" class="error"> This Field is required </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Age</label>
+          <input required #age="ngModel" minlength="1" maxlength="3" type="text" class="form-control" name="age" ngModel>
+          <span *ngIf="age.invalid && age.touched" class="error"> This Field is required </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input required #address="ngModel" type="text" class="form-control" name="address" ngModel>
+            <span *ngIf="address.invalid && address.touched" class="error"> This Field is required </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">City</label>
+            <input required #city="ngModel" type="text" class="form-control" name="city" ngModel>
+            <span *ngIf="city.invalid && city.touched" class="error"> This Field is required </span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Phone No</label>
+            <input #phone="ngModel" maxlength="10" type="text" class="form-control" name="phone number" ngModel>
+        </div>
+        <button type="submit" [disabled]="userForm.invalid && userForm.untouched" class="btn btn-primary">Submit</button>
+      </form>
+</div>
