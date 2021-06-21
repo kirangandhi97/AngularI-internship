@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavBarModule } from './nav-bar/nav-bar.module';
+import { CrudModule } from './crud/crud.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,8 @@ import { ChildCompComponent } from './parent-comp/child-comp/child-comp.componen
 import { TempDrivenFormComponent } from './Tasks/temp-driven-form/temp-driven-form.component';
 import { ReactiveFormComponent } from './Tasks/reactive-form/reactive-form.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,15 +28,18 @@ import { ReactiveFormComponent } from './Tasks/reactive-form/reactive-form.compo
     ParentCompComponent,
     ChildCompComponent,
     TempDrivenFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    NavBarModule,
+    CrudModule
   ],
-  providers: [],
+  providers: [],  //problem
   bootstrap: [AppComponent]
 })
 export class AppModule { }

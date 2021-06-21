@@ -1,0 +1,18 @@
+{
+  "Student": [
+    {
+      "name": "ragen patel",
+      "age": "17",
+      "address": "surat",
+      "skills": "painting",
+      "id": 2
+    },
+    {
+      "name": "kiran Gandhi",
+      "age": "24",
+      "address": "bilimora",
+      "skills": "hiking",
+      "id": 3
+    }
+  ]
+}
