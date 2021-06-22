@@ -1,8 +1,7 @@
 <div class="col-sm-6">
-<table class="table">
+  <table class="table">
     <thead>
       <tr>
-      
         <th scope="col">Name</th>
         <th scope="col">Age</th>
         <th scope="col">Address</th>
@@ -10,19 +9,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let studentData of studentArr">
+      <tr *ngFor="let studentData of studentArr; index as i">
         <td>{{studentData.name}}</td>
         <td>{{studentData.age}}</td>
         <td>{{studentData.address}}</td>
-       <td>{{studentData.skills}}</td>
-       <button (click)="onDeleteStudent(studentData.id)">Delete</button>
+        <td>{{studentData.skills}}</td>
+        <button (click)="onDeleteStudent(studentData.id)">Delete</button>
+        <!-- <button (click)="onEditStudent(studentData.id)">Edit</button> -->
       </tr>
     </tbody>
   </table>
-  
 </div>
-<!-- <div class="form-group" *ngIf="userForm.value.skill.length > 1">
-  <button class="btn btn-danger" (click)="onDeleteSkill(skillIndex)">Delete</button>
-</div>
-</ng-container>
-</div> -->

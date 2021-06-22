@@ -28,6 +28,17 @@ export class StudentService {
 
   addStudent(student:Students): Observable<Students>{                                  //expecting data to return as product 
   const studentUrl = 'http://localhost:3000/Student';
-  return this.httpclient.post<Students>(this.url, student, httpheader);                   //return an observable
+  return this.httpclient.post<Students>(this.url, student, httpheader);         
+            //return an observable
   }
+
+  updatestudent(student: Students): Observable<Students> {
+    debugger
+    return this.httpclient.put<Students>(this.url + '/' + student.id, student, httpheader);
+  }
+
+  getStudentById(id: string): Observable<Students> {       
+    return this.httpclient.get<Students>(this.url + '/' + id);
+  }
+
 }

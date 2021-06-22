@@ -31,5 +31,10 @@ export class ListComponent implements OnInit {
       })
   }
 
+  onEditStudent(studentDataId:string, index:any){                     //for edit student
+    console.log(studentDataId[index]);
+    
+  }
+
   
 }
