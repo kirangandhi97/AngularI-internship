@@ -11,6 +11,9 @@ const httpheader = {
   providedIn: 'root'
 })
 export class StudentService {
+  getByIdStudents(studentIndex: number) {
+    throw new Error('Method not implemented.');
+  }
   studentArr : Students[]=[];
 
   url:string = 'http://localhost:3000/Student';
@@ -22,8 +25,8 @@ export class StudentService {
     
   }
 
-  removeStudent(id:string): Observable<Students>{
-    return this.httpclient.delete<Students>(this.url + '/' + id, httpheader);
+  removeStudent(id:number): Observable<number>{
+    return this.httpclient.delete<number>(this.url + '/' + id, httpheader);
   }
 
   addStudent(student:Students): Observable<Students>{                                  //expecting data to return as product 
@@ -32,13 +35,11 @@ export class StudentService {
             //return an observable
   }
 
-  updatestudent(student: Students): Observable<Students> {
-    debugger
-    return this.httpclient.put<Students>(this.url + '/' + student.id, student, httpheader);
+  public updatestudent(student: Students):Observable<Students>{
+   return this.httpclient.put<Students>(`${this.url}student/${student.id}`,student) // edit
   }
 
-  getStudentById(id: string): Observable<Students> {       
-    return this.httpclient.get<Students>(this.url + '/' + id);
+  getStudentById(id: any): Observable<Students> {       //get by id
+    return this.httpclient.get<Students>(`${this.url}student/${id}`);
   }
-
 }

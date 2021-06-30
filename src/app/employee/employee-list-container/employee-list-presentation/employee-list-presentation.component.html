@@ -1,0 +1,23 @@
+<div class="col-sm-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Employee Name</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Is Greater Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employeeData of employeeList; index as i">
+          <td>{{employeeData.empId}}</td>
+          <td>{{employeeData.empName}}</td>
+          <td>{{employeeData.empSalary}}</td>
+          <td>{{employeeData.isGreaterSalary}}</td>
+          <!-- <button (click)="onDeleteStudent(studentData.id)">Delete</button> -->
+          <!-- <button (click)="onEditStudent(studentData.id)">Edit</button> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -32,6 +32,7 @@ export class ReactiveFormComponent implements OnInit {
 
   onAddSkill(){
     this.skill.push(this.fb.control(''));
+    
   }
 
   onDeleteSkill(index:number){

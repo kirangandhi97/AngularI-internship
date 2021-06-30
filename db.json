@@ -1,18 +1,46 @@
 {
   "Student": [
     {
-      "name": "ragen patel",
-      "age": "17",
-      "address": "surat",
-      "skills": "painting",
-      "id": 2
-    },
-    {
       "name": "yesha gandhi",
       "age": "22",
       "address": "bilimora",
       "skills": "hiking",
       "id": 3
+    },
+    {
+      "id": 4,
+      "name": "rajesh",
+      "age": "25",
+      "address": "surat",
+      "skills": "cooking"
+    },
+    {
+      "name": "kiran",
+      "age": "24",
+      "address": "bilimora",
+      "skills": "painting",
+      "id": 5
+    }
+  ],
+
+  "Employee": [
+    {
+      "empId": 1,
+      "empName":"Kiran Gandhi",
+      "empSalary": 8000,
+      "isGreaterSalary": false
+    },
+    {
+      "empId": 2,
+      "empName":"Yanika Patel",
+      "empSalary": 25000,
+      "isGreaterSalary": true
+    },
+    {
+      "empId": 3,
+      "empName":"Mitesh Contractor",
+      "empSalary": 21000,
+      "isGreaterSalary": true
     }
   ]
 }
